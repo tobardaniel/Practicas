@@ -28,9 +28,12 @@ def simple_sum1(numero, mod):
         arr_cifras = cifras(i)[::-1]
         potencia = 1
         for k in arr_cifras:
-            potencia = (potencia*pow(i, pow(2,k), mod)) % mod
+            potencia = (potencia*pow(i, pow(2, k), mod)) % mod
         suma += potencia
     return suma % mod
+
+
+
 
 
 

@@ -49,6 +49,5 @@ def minimax(matriz):
         return cambios
 
 
-
 matriz = leer_matriz(int(input()))
 print(minimax(matriz))
