@@ -1,4 +1,6 @@
 import numpy as np
+from random import randrange
+import time
 
 
 def leer_matriz(n):
@@ -49,5 +51,29 @@ def minimax(matriz):
         return cambios
 
 
-matriz = leer_matriz(int(input()))
-print(minimax(matriz))
+def ordenar1(matriz, arg='F'):
+    if arg == 'F':
+        mat = np.array([sorted(s) for s in matriz])
+        return mat
+    elif arg == 'C':
+        matriz = matriz.transpose()
+        matriz = np.array([sorted(s) for s in matriz])
+        matriz = matriz.transpose()
+        return matriz
+
+
+def minimax1(matriz):
+    pass
+
+
+#matriz = leer_matriz(int(input()))
+#print(minimax(matriz))
+
+
+
+orden = 500
+matriz = np.array([[randrange(100) for s in range(orden)] for s in range(orden)])
+start = time.time()
+resultado = minimax(matriz)
+tiempo = time.time() - start
+print(resultado, tiempo)

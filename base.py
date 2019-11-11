@@ -38,5 +38,5 @@ def primer_digito(numero, base):
 
 casos = input()
 for i in range(int(casos)):
-    numero = input()
-    print(bases(numero))
+    num = input()
+    print(bases(num))
